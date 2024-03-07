@@ -37,6 +37,20 @@ void dispay() {                                                                 
     }
     cout << endl;                                                                               //Output baris kosong
 }
+
+void bubbleSortArray() {                                                                        //Prosedure untuk mengurutkan array dengan metode bubble sort
+    int pass = 1;                                                                               //step 1
+
+    for (pass; pass <= n - 1; pass++) {                                                         //looping dengan i dimulai dari 1 hingga n-1
+        for (int j = 0; j <= n - 1 - pass; j++) {                                               //looping dengan j dimulai dari 0 hingga n-1
+            if (a[j] > a[j + 1]) {                                                              //jika nilai pada a[j] lebih besar dari a[j + 1]
+                int temp = a[j];                                                                //simpan nilai a[j] ke variabel sementara temp
+                a[j] = a[j + 1];                                                                //Assign nilai a[j + 1] ke a [j]
+                a[j + 1] = temp;                                                                //Assign nilai temp ke a[j + 1]
+            }
+        }
+    }
+}
 int main()
 {
     std::cout << "Hello World!\n";
